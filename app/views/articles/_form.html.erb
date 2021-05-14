@@ -1,0 +1,20 @@
+<%= form_with model: @article do |form| %>
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title , class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :body %>
+    <%= form.text_area :body , class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :avatar %>
+    <%= form.file_field :avatar %>
+  </div>
+
+  <div class="mt-3">
+    <%= form.submit 'Create Article', class: "btn btn-primary btn-block" %>
+  </div>
+<% end %>
